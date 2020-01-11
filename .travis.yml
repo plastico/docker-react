@@ -9,11 +9,10 @@ script:
   - docker run -e CI=true plastico/docker-react npm run test -- --coverage
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: "ap-northeast-1"
   app: "docker"
-  env: "Docker-env-1"
+  env: "Docker-env"
   bucket_name: "elasticbeanstalk-ap-northeast-1-035414502441"
   bucket_path: "docker"
   on:
