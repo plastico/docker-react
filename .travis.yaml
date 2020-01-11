@@ -6,4 +6,4 @@ before_install:
   - docker build -t plastico/docker-react -f Dockerfile.dev .
 
   script:
-    - docker run plastico/docker-react npm run test -- --coverage
+    - docker run -e CI=true plastico/docker-react npm run test -- --coverage
